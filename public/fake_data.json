@@ -1,57 +1,63 @@
 [
     {
-        "name" : "",
-        "image" : "",
-        "fees" : "",
-        "date" : "",
-        "time" : "",
-        "profession" : "",
-        "description" : ""
+        "name" : "CareConnect Camp",
+        "image" : "https://vista.today/wp-content/uploads/2017/05/iStock-610425364-970x550.jpg",
+        "fees" : "80",
+        "date" : "5 June, 2024",
+        "time" : "10:00 AM",
+        "profession" : "Ophthalmologists",
+        "description" : "CareConnect Camp is a temporary healthcare facility designed to provide essential medical services to underserved and remote communities. Our mission is to bridge the gap in healthcare access by offering a comprehensive range of medical, dental, and mental health services. The camp is staffed by a diverse team of dedicated healthcare professionals who work collaboratively to ensure holistic and patient-centered care.",
+        "location" : ""
     },
     {
-        "name" : "",
-        "image" : "",
-        "fees" : "",
-        "date" : "",
-        "time" : "",
-        "profession" : "",
-        "description" : ""
+        "name" : "Health Revival Camp",
+        "image" : "https://media.istockphoto.com/id/1340758396/photo/medical-specialists-working-with-migrants.jpg?s=612x612&w=0&k=20&c=sBGv6Vasf6yYRbJRimMLRvhvQXwi9MYL-NWGxPhmr60=",
+        "fees" : "50",
+        "date" : "1 June, 2024",
+        "time" : "01:00 PM",
+        "profession" : "Pharmacists",
+        "description" : "Health Revival Camp is a dedicated initiative aimed at revitalizing the health and well-being of communities in need by providing comprehensive medical, dental, and mental health services. Our goal is to foster a healthier and more resilient community by offering accessible, high-quality care in a compassionate and supportive environment. The camp brings together a multidisciplinary team of healthcare professionals committed to addressing a wide range of health concerns.",
+        "location" : ""
     },
     {
-        "name" : "",
-        "image" : "",
-        "fees" : "",
-        "date" : "",
-        "time" : "",
-        "profession" : "",
-        "description" : ""
+        "name" : "LifeLine Health Camp",
+        "image" : "https://media.istockphoto.com/id/1347306311/photo/young-doctor-putting-bandage-around-wounded-head-of-refugee-man.jpg?s=612x612&w=0&k=20&c=p__VsxxKnUqV2wvhiQvhG8JcqU1d_IAP479hRSsj_xI=",
+        "fees" : "40",
+        "date" : "7 June, 2024",
+        "time" : "02:30 PM",
+        "profession" : "Laboratory Technicians",
+        "description" : "LifeLine Health Camp is a vital initiative dedicated to delivering essential healthcare services to underserved and remote communities. Our mission is to provide accessible, high-quality medical care and promote overall health and well-being through a comprehensive range of services. Staffed by a team of passionate and skilled healthcare professionals, LifeLine Health Camp is committed to addressing the diverse health needs of individuals and families in need.",
+        "location" : ""
     },
     {
-        "name" : "",
-        "image" : "",
-        "fees" : "",
-        "date" : "",
-        "time" : "",
-        "profession" : "",
-        "description" : ""
+        "name" : "Medical Aid Camp",
+        "image" : "https://vishavmanavruhanikendra.in/wp-content/uploads/2022/08/KY-2022-1200x720-Kanwar-Medical-20220723-Nawan-Nagar-HR-photo0121.jpg",
+        "fees" : "60",
+        "date" : "9 June,2024",
+        "time" : "12:00 PM",
+        "profession" : "Dental Hygienists",
+        "description" : "A medical aid camp is a temporary healthcare facility set up to provide free medical services to people in underserved communities. These camps are typically organized by charitable organizations, NGOs, or even hospitals, aiming to bridge the gap in healthcare access.  Doctors from various specializations like pediatrics, gynecology, dentistry etc. attend the camp and provide checkups to attendees.",
+        "location" : ""
     },
     {
-        "name" : "",
-        "image" : "",
-        "fees" : "",
-        "date" : "",
-        "time" : "",
-        "profession" : "",
-        "description" : ""
+        "name" : "LifeCare Camp",
+        "image" : "https://lifecarefoundation.in/wp-content/uploads/2023/05/pic-1-1-min-1.jpg",
+        "fees" : "100",
+        "date" : "27 July,204",
+        "time" : "02:00PM",
+        "profession" : "Epidemiologists",
+        "description" : "The Medical Aid Camp is a critical initiative designed to provide essential healthcare services to underserved and remote communities. Our objective is to deliver high-quality medical care and health education, addressing the immediate health needs of the population while promoting long-term well-being. The camp is staffed by a dedicated team of healthcare professionals who are committed to making a positive impact on community health.",
+        "location" : ""
     },
     {
-        "name" : "",
-        "image" : "",
-        "fees" : "",
-        "date" : "",
-        "time" : "",
-        "profession" : "",
-        "description" : ""
+        "name" : "Hope and Healing Camp",
+        "image" : "https://www.hopva.org/wp-content/uploads/2020/03/CenterForChildren_JourneysGriefCamp.jpg",
+        "fees" : "30",
+        "date" : "8 June, 2024",
+        "time" : "03:00 PM",
+        "profession" : "Psychologists",
+        "description" : "The Hope and Healing Camp can refer to a few different programs, but they all share a common goal: to provide a safe and supportive environment for people who have experienced challenges to heal and move forward.",
+        "location" : ""
     }
 
 ]
