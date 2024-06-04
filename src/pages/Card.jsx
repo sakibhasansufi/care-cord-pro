@@ -12,11 +12,14 @@ const Card = () => {
     return (
         <div className="mt-5">
             <h1 className="text-center font-montserrat text-3xl font-bold">Our popular medical camps</h1>
-            <div>
+            <section className="flex justify-center">
+            <div className="">
                 {
                     medCamp.map(camp=><CardDetail key={camp._id} camp={camp}></CardDetail>)
                 }
             </div>
+            </section>
+           
 
         </div>
     );
