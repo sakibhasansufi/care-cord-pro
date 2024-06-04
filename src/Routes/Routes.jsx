@@ -8,6 +8,7 @@ import JoinUs from "../pages/JoinUs";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import ErrorPage from "../pages/ErrorPage";
+import PrivateRoute from './PrivateRoute'
 
   export const router = createBrowserRouter([
     {
@@ -34,7 +35,8 @@ import ErrorPage from "../pages/ErrorPage";
         {
           path : '/signUp',
           element : <SignUp></SignUp>
-        }
+        },
+        
       ]
     },
   ]);
