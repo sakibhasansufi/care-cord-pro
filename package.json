@@ -23,6 +23,7 @@
     "react-particles": "^2.12.2",
     "react-router-dom": "^6.23.1",
     "sort-by": "^1.2.0",
+    "swiper": "^11.1.4",
     "tsparticles": "^3.4.0",
     "tsparticles-slim": "^2.12.0"
   },
