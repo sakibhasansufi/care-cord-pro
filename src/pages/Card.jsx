@@ -13,7 +13,7 @@ const Card = () => {
         <div className="mt-5">
             <h1 className="text-center font-montserrat text-3xl font-bold">Our popular medical camps</h1>
             <section className="flex justify-center">
-            <div className="">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 z-40">
                 {
                     medCamp.map(camp=><CardDetail key={camp._id} camp={camp}></CardDetail>)
                 }
