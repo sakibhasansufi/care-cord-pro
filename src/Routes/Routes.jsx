@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import ErrorPage from "../pages/ErrorPage";
 import PrivateRoute from './PrivateRoute'
+import SingleCard from "../pages/SingleCard";
 
   export const router = createBrowserRouter([
     {
@@ -36,6 +37,11 @@ import PrivateRoute from './PrivateRoute'
           path : '/signUp',
           element : <SignUp></SignUp>
         },
+        {
+          path : '/camp/:id',
+          element : <SingleCard></SingleCard>,
+          loader : ({params})=> fetch(`http://localhost:5000/camp/${params.id}`)
+        }
         
       ]
     },

@@ -5,9 +5,12 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { AwesomeButton } from "react-awesome-button";
 import 'react-awesome-button/dist/styles.css';
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 
 const CardDetail = ({ camp }) => {
+  const {user} = useContext(AuthContext);
   const { _id, name, image, fees, date, time, profession, location } = camp;
   return (
     <div className='font-roboto'>
@@ -53,7 +56,7 @@ const CardDetail = ({ camp }) => {
             <AwesomeButton type="anchor" >See all camps</AwesomeButton>
 
           </Link>
-          <Link to={`/${_id}`}>
+          <Link to={`/camp/${_id}`}>
             <button className="rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">View Details</button>
           </Link>
 
