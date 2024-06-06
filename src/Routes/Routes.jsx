@@ -39,7 +39,7 @@ import SingleCard from "../pages/SingleCard";
         },
         {
           path : '/camp/:id',
-          element : <SingleCard></SingleCard>,
+          element : <PrivateRoute><SingleCard></SingleCard></PrivateRoute>,
           loader : ({params})=> fetch(`http://localhost:5000/camp/${params.id}`)
         }
         

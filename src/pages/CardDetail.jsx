@@ -2,18 +2,46 @@ import { LuTimer } from "react-icons/lu";
 import { BsCalendar2Date } from "react-icons/bs";
 import { GrMoney } from "react-icons/gr";
 import { FaLocationDot } from "react-icons/fa6";
-import { Link } from "react-router-dom";
-import { AwesomeButton } from "react-awesome-button";
-import 'react-awesome-button/dist/styles.css';
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import Swal from "sweetalert2";
+import toast from "react-hot-toast";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 
 const CardDetail = ({ camp }) => {
-  const {user} = useContext(AuthContext);
-  const { _id, name, image, fees, date, time, profession, location } = camp;
+  const { _id, name, image, fees, date, time, profession, location, participant } = camp;
+  const { user } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure();
+  const handleJoin = join => {
+    if (user && user.email) {
+      console.log(user.email, join)
+      const joinInfo = {
+        joinId: _id,
+        email: user.email,
+        name,
+        image,
+        fees,
+        date,
+        time,
+        profession,
+        location
+      }
+      axiosSecure.post('/join', joinInfo)
+        .then(res => {
+          if (res.data.insertedId) {
+            toast.success(`You have successfully joined ${name}`,{
+              position : "bottom-center"
+            })
+          }
+        })
+    }
+
+  }
   return (
     <div className='font-roboto'>
+      
       <div className="mx-auto w-auto  space-y-4 rounded-lg bg-white p-6 shadow-lg  dark:bg-[#18181B]">
         <div className='flex justify-center'>
           <img src={image} className="h-[275px] w-[350px] rounded-lg object-cover" alt="" />
@@ -47,17 +75,15 @@ const CardDetail = ({ camp }) => {
 
           </div>
           <div className="text-lg font-montserrat font-semibold">Health Care Profession: <span className='font-normal text-sm'>{profession}</span></div>
+          <div className="font-roboto text-lg text-red">Participant Numbers : 0</div>
 
 
 
         </div>
         <div className="flex justify-between">
-          <Link to='/available'>
-            <AwesomeButton type="anchor" >See all camps</AwesomeButton>
 
-          </Link>
           <Link to={`/camp/${_id}`}>
-            <button className="rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">View Details</button>
+            <button onClick={handleJoin} className="rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">Join Now</button>
           </Link>
 
         </div>

@@ -50,6 +50,7 @@ const SingleCard = () => {
         .then(res=>res.json())
         .then(data=>{
             if(data.insertedId){
+                
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
