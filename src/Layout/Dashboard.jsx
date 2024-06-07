@@ -6,11 +6,13 @@ import { LuSettings2 } from "react-icons/lu";
 import { MdHomeFilled } from "react-icons/md";
 import { IoAnalyticsSharp } from "react-icons/io5";
 import { MdPayment } from "react-icons/md";
+import useJoin from "../hooks/useJoin";
 
 
 const Dashboard = () => {
     // to do 
     const isAdmin = true;
+    const [joined]=useJoin();
     return (
         <div className="flex ">
             {/* side bar */}

@@ -11,7 +11,7 @@ import useJoin from "../hooks/useJoin";
 
 
 const CardDetail = ({ camp }) => {
-  const { _id, name, image, fees, date, time, profession, location, participant } = camp;
+  const { _id, name, image, fees, date, time, profession, location } = camp;
   const [joined,refetch]=useJoin();
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
