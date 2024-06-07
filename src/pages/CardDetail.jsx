@@ -12,7 +12,7 @@ import useJoin from "../hooks/useJoin";
 
 const CardDetail = ({ camp }) => {
   const { _id, name, image, fees, date, time, profession, location, participant } = camp;
-  const [joined,refetch]=useJoin()
+  const [joined,refetch]=useJoin();
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
   const handleJoin = () => {
@@ -35,8 +35,8 @@ const CardDetail = ({ camp }) => {
             toast.success(`You have successfully joined ${name}`,{
               position : "bottom-center"
             })
-            refetch()
-          }
+          refetch()
+            }
         })
     }
 

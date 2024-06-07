@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const Card = () => {
+    
     const [medCamp, setMedCamp] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/camp')
@@ -26,6 +27,7 @@ const Card = () => {
 
                 </Link>
             </div>
+            
 
 
 

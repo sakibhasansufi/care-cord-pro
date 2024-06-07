@@ -1,6 +1,6 @@
 import {
-    createBrowserRouter,
-  } from "react-router-dom";
+  createBrowserRouter,
+} from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../pages/Home";
 import AvailableCamp from "../pages/AvailableCamp";
@@ -12,49 +12,64 @@ import PrivateRoute from './PrivateRoute'
 import SingleCard from "../pages/SingleCard";
 import Dashboard from "../Layout/Dashboard";
 import Cart from "../Dashboard/Cart";
+import AddCamp from "../Dashboard/AddCamp";
+import ManageCamp from "../Dashboard/ManageCamp";
+import ManageRegisterCamp from "../Dashboard/ManageRegisterCamp";
 
-  export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      errorElement : <ErrorPage></ErrorPage>,
-      children : [
-        {
-            index : true,
-            element : <Home></Home>
-        },
-        {
-          path : '/available',
-          element : <AvailableCamp></AvailableCamp>
-        },
-        {
-          path : '/join',
-          element : <JoinUs></JoinUs>
-        },
-        {
-          path : '/login',
-          element : <Login></Login>
-        },
-        {
-          path : '/signUp',
-          element : <SignUp></SignUp>
-        },
-        {
-          path : '/camp/:id',
-          element : <PrivateRoute><SingleCard></SingleCard></PrivateRoute>,
-          loader : ({params})=> fetch(`http://localhost:5000/camp/${params.id}`)
-        }
-        
-      ]
-    },
-    {
-      path : 'dashboard',
-      element : <Dashboard></Dashboard>,
-      children : [
-        {
-          path : 'cart',
-          element : <Cart></Cart>
-        }
-      ]
-    }
-  ]);
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        index: true,
+        element: <Home></Home>
+      },
+      {
+        path: '/available',
+        element: <AvailableCamp></AvailableCamp>
+      },
+      {
+        path: '/join',
+        element: <JoinUs></JoinUs>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/signUp',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: '/camp/:id',
+        element: <PrivateRoute><SingleCard></SingleCard></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/camp/${params.id}`)
+      }
+
+    ]
+  },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children: [
+      {
+        path: 'cart',
+        element: <Cart></Cart>
+      },
+      {
+        path: 'add',
+        element: <AddCamp></AddCamp>
+      },
+      {
+        path: 'manage',
+        element: <ManageCamp></ManageCamp>
+      },
+      {
+        path: 'manageRegister',
+        element: <ManageRegisterCamp></ManageRegisterCamp>
+      }
+    ]
+  }
+]);
