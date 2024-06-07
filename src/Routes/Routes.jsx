@@ -10,6 +10,8 @@ import SignUp from "../pages/SignUp";
 import ErrorPage from "../pages/ErrorPage";
 import PrivateRoute from './PrivateRoute'
 import SingleCard from "../pages/SingleCard";
+import Dashboard from "../Layout/Dashboard";
+import Cart from "../Dashboard/Cart";
 
   export const router = createBrowserRouter([
     {
@@ -45,4 +47,14 @@ import SingleCard from "../pages/SingleCard";
         
       ]
     },
+    {
+      path : 'dashboard',
+      element : <Dashboard></Dashboard>,
+      children : [
+        {
+          path : 'cart',
+          element : <Cart></Cart>
+        }
+      ]
+    }
   ]);

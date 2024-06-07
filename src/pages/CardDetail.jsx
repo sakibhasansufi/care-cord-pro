@@ -2,21 +2,22 @@ import { LuTimer } from "react-icons/lu";
 import { BsCalendar2Date } from "react-icons/bs";
 import { GrMoney } from "react-icons/gr";
 import { FaLocationDot } from "react-icons/fa6";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 import useAxiosSecure from "../hooks/useAxiosSecure";
+import useJoin from "../hooks/useJoin";
 
 
 const CardDetail = ({ camp }) => {
   const { _id, name, image, fees, date, time, profession, location, participant } = camp;
+  const [joined,refetch]=useJoin()
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
-  const handleJoin = join => {
+  const handleJoin = () => {
     if (user && user.email) {
-      console.log(user.email, join)
+      console.log(user.email)
       const joinInfo = {
         joinId: _id,
         email: user.email,
@@ -34,6 +35,7 @@ const CardDetail = ({ camp }) => {
             toast.success(`You have successfully joined ${name}`,{
               position : "bottom-center"
             })
+            refetch()
           }
         })
     }
@@ -75,7 +77,7 @@ const CardDetail = ({ camp }) => {
 
           </div>
           <div className="text-lg font-montserrat font-semibold">Health Care Profession: <span className='font-normal text-sm'>{profession}</span></div>
-          <div className="font-roboto text-lg text-red">Participant Numbers : 0</div>
+          <div className="font-roboto text-lg text-red">Participant Numbers : {joined.length}</div>
 
 
 
