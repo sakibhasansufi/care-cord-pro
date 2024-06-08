@@ -5,15 +5,14 @@ import useAxiosSecure from "../hooks/useAxiosSecure";
 const ManageRegisterCamp = () => {
     const axiosSecure = useAxiosSecure();
     const { data: users = [] } = useQuery({
-        queryKey: ['users'],
+        queryKey: ['joincamp'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/users');
+            const res = await axiosSecure.get('/joincamp');
             return res.data;
         }
     })
     return (
         <div>
-            all users {users.length}
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -33,9 +32,9 @@ const ManageRegisterCamp = () => {
                         {
                             users.map((user,index) => <tr key={user._id}>
                                 <th>{index+1}</th>
+                                <td>{user.userName}</td>
                                 <td>{user.name}</td>
-                                <td>Quality Control Specialist</td>
-                                <td>Blue</td>
+                                <td>$ {user.fees}</td>
                                 <td>Blue</td>
                                 <td>Blue</td>
                                 <td>Blue</td>

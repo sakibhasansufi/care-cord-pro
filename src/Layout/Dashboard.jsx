@@ -14,7 +14,7 @@ const Dashboard = () => {
     const isAdmin = true;
     const [joined]=useJoin();
     return (
-        <div className="flex ">
+        <div className="flex mt-10">
             {/* side bar */}
             <div className="w-auto px-2 py-4 min-h-full border">
                 <ul className="menu">
@@ -74,7 +74,7 @@ const Dashboard = () => {
                 </ul>
             </div>
 
-            <section className="flex-1 ">
+            <section className="flex px-20">
                 <Outlet></Outlet>
             </section>
         </div>
