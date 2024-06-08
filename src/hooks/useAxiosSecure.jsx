@@ -1,27 +1,38 @@
 import axios from "axios";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const axiosSecure = axios.create({
-    baseURL : 'http://localhost:5000'
+    baseURL: 'http://localhost:5000'
 })
 const useAxiosSecure = () => {
-    axiosSecure.interceptors.request.use(function(config){
+    const navigate = useNavigate();
+    const { logOut } = useContext(AuthContext);
+    axiosSecure.interceptors.request.use(function (config) {
         const token = localStorage.getItem('access-token')
-        console.log('request stopped by interceptors',token);
-        config.headers.authorization = `Bearer ${token}` ;
+        console.log('request stopped by interceptors', token);
+        config.headers.authorization = `Bearer ${token}`;
         return config;
-    },function(error){
+    }, function (error) {
         return Promise.reject(error);
     })
 
     // interceptor 401 and 403
-    axiosSecure.interceptors.response.use(function(response){
+    axiosSecure.interceptors.response.use(function (response) {
         return response;
-    }, (error)=>{
+    }, async (error) => {
         const status = error.response.status;
         console.log('error code',status);
+        // 404 and 401 logout the user and move the user to the log in page
+        if (status === 401 || status === 403) {
+            await logOut();
+            navigate('/login')
+        }
+        
         return Promise.reject(error);
     })
-   return axiosSecure;
+    return axiosSecure;
 };
 
 export default useAxiosSecure;
