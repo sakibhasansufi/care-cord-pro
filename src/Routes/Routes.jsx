@@ -54,6 +54,7 @@ export const router = createBrowserRouter([
     path: 'dashboard',
     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
+
       {
         path: 'cart',
         element: <Cart></Cart>
@@ -62,6 +63,7 @@ export const router = createBrowserRouter([
         path: 'add',
         element: <AddCamp></AddCamp>
       },
+
       {
         path: 'manage',
         element: <ManageCamp></ManageCamp>

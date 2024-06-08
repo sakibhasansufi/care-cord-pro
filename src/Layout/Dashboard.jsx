@@ -7,11 +7,12 @@ import { MdHomeFilled } from "react-icons/md";
 import { IoAnalyticsSharp } from "react-icons/io5";
 import { MdPayment } from "react-icons/md";
 import useJoin from "../hooks/useJoin";
+import useAdmin from "../hooks/useAdmin";
 
 
 const Dashboard = () => {
     // to do 
-    const isAdmin = true;
+    const isAdmin = useAdmin();
     const [joined]=useJoin();
     return (
         <div className="flex mt-10">
