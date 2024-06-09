@@ -15,6 +15,7 @@ import Cart from "../Dashboard/Cart";
 import AddCamp from "../Dashboard/AddCamp";
 import ManageCamp from "../Dashboard/ManageCamp";
 import ManageRegisterCamp from "../Dashboard/ManageRegisterCamp";
+import AdminRoutes from './AdminRoutes'
 
 export const router = createBrowserRouter([
   {
@@ -57,20 +58,20 @@ export const router = createBrowserRouter([
 
       {
         path: 'cart',
-        element: <Cart></Cart>
+        element: <AdminRoutes><Cart></Cart></AdminRoutes>
       },
       {
         path: 'add',
-        element: <AddCamp></AddCamp>
+        element: <AdminRoutes><AddCamp></AddCamp></AdminRoutes>
       },
 
       {
         path: 'manage',
-        element: <ManageCamp></ManageCamp>
+        element: <AdminRoutes><ManageCamp></ManageCamp></AdminRoutes>
       },
       {
         path: 'manageRegister',
-        element: <ManageRegisterCamp></ManageRegisterCamp>
+        element: <AdminRoutes><ManageRegisterCamp></ManageRegisterCamp></AdminRoutes>
       }
     ]
   }
