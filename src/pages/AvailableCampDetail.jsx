@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 
 const AvailableCampDetail = ({ avl }) => {
-    const { name, image, fees, date, time, profession, location, description } = avl;
+    const { name, image, fees, date, time, professionalName, location, description } = avl;
     return (
         <section>
             <div className='font-roboto'>
@@ -43,7 +43,9 @@ const AvailableCampDetail = ({ avl }) => {
                             </div>
 
                         </div>
-                        <div className="text-lg font-montserrat font-semibold">Health Care Profession: <span className='font-normal text-sm'>{profession}</span></div>
+                        <div className="text-lg font-montserrat font-semibold">Health Care Profession: <span className='font-normal text-sm'>{professionalName}</span></div>
+
+                        <div className="text-lg font-montserrat font-semibold">Description : <span className='font-normal font-roboto'>{description}</span></div>
 
 
 

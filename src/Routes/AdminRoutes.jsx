@@ -14,7 +14,7 @@ const AdminRoutes = ({children}) => {
     if (user && isAdmin) {
         return children;
     }
-    return <Navigate state={location.pathname} to='/' replace></Navigate>
+    return <Navigate state={location.pathname} to='/' ></Navigate>
 
 };
 

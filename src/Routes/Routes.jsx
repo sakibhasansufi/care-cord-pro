@@ -15,7 +15,8 @@ import Cart from "../Dashboard/Cart";
 import AddCamp from "../Dashboard/AddCamp";
 import ManageCamp from "../Dashboard/ManageCamp";
 import ManageRegisterCamp from "../Dashboard/ManageRegisterCamp";
-import AdminRoutes from './AdminRoutes'
+import AdminRoutes from './AdminRoutes';
+import Analytics from '../Dashboard/AllUsers/Analytics'
 
 export const router = createBrowserRouter([
   {
@@ -53,8 +54,10 @@ export const router = createBrowserRouter([
   },
   {
     path: 'dashboard',
-    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    element: <Dashboard></Dashboard>,
     children: [
+
+      // admin route
 
       {
         path: 'cart',
@@ -62,7 +65,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'add',
-        element: <AdminRoutes><AddCamp></AddCamp></AdminRoutes>
+        element: <AdminRoutes><AddCamp></AddCamp></AdminRoutes>,
       },
 
       {
@@ -72,6 +75,10 @@ export const router = createBrowserRouter([
       {
         path: 'manageRegister',
         element: <AdminRoutes><ManageRegisterCamp></ManageRegisterCamp></AdminRoutes>
+      },
+      {
+        path : 'analytics',
+        element : <Analytics></Analytics>
       }
     ]
   }

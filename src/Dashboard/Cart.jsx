@@ -24,14 +24,9 @@ const Cart = () => {
             })
     }
     return (
-        <div className="mr-8">
-            {
-                users.length
-            }
-
-
-
-            <section>
+        <div className="mr-8 ">
+            
+            <section className="hidden">
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}

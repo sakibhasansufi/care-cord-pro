@@ -50,7 +50,7 @@ const Navbar = () => {
                                 </p>
                             </li>
 
-                            <li><Link to='/dashboard/cart'>Dashboard</Link></li>
+                            <li><Link to='/dashboard'>Dashboard</Link></li>
                             <li><a onClick={logOut}>Logout</a></li>
                         </ul>
                     </div>

@@ -12,8 +12,7 @@ import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
     // to do 
-    const isAdmin = useAdmin();
-    const [joined]=useJoin();
+    const [isAdmin] = useAdmin();
     return (
         <div className="flex mt-10">
             {/* side bar */}
@@ -45,7 +44,9 @@ const Dashboard = () => {
                                 <li><NavLink to='/' className='drop-shadow-xl'>Home</NavLink></li>
                             </div>
                         </>
-                            : <>
+                            :
+
+                            <>
                                 <p className="text-2xl font-semibold mb-4">Care Cord Pro <br /> <span className="text-lg font-medium">User Dash Board</span> </p>
                                 <div className="flex ">
                                     <IoAnalyticsSharp className="text-3xl" />
@@ -69,7 +70,10 @@ const Dashboard = () => {
                                     <li><NavLink to='/' className='drop-shadow-xl'>Home</NavLink></li>
                                 </div>
                             </>
+
                     }
+
+
 
 
                 </ul>
