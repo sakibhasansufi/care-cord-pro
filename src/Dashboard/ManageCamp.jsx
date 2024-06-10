@@ -3,6 +3,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 const ManageCamp = () => {
     const axiosSecure = useAxiosSecure();
     const { data: campAdd = [], refetch } = useQuery({
@@ -35,27 +36,19 @@ const ManageCamp = () => {
                         icon: "success"
                     });
                 }
-
-                // Swal.fire({
-                //     title: "Deleted!",
-                //     text: "Your file has been deleted.",
-                //     icon: "success"
-                // });
             }
         });
     };
 
 
 
-    const handleUpdateCamp = (camps) => {
 
-    }
 
 
 
     return (
         <section>
-            <h2 className="text-4xl mb-2   font-bold">Manage Camps</h2>
+            <h2 className="text-4xl mb-2 ml-60 md:ml-72 lg:ml-80  font-bold">Manage Camps</h2>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -82,11 +75,12 @@ const ManageCamp = () => {
 
 
                                 <td>
-                                    <button
-                                        onClick={() => handleUpdateCamp(camps)}
-                                    >
-                                        <FiEdit className="text-green text-xl mr-5" />
-                                    </button>
+                                    <Link to={`/dashboard/campAdd/${camps._id}`}>
+                                        <button>
+                                            <FiEdit className="text-green text-xl mr-5" />
+                                        </button>
+                                    </Link>
+
                                 </td>
                                 <td>
                                     <button

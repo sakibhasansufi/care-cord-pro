@@ -49,7 +49,7 @@ const AddCamp = () => {
     
     return (
         <div>
-            <h2 className="text-4xl mb-2  font-bold">Add Item</h2>
+            <h2 className="text-4xl mb-2 ml-16 md:ml-40 lg:ml-40  font-bold">Add Item</h2>
             <section>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label >Camp Name <span className="text-red">*</span></label> <br />

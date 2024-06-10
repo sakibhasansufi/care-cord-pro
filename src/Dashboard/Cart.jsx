@@ -25,8 +25,9 @@ const Cart = () => {
     }
     return (
         <div className="mr-8 ">
+            <h2 className="text-4xl mb-2 ml-16 md:ml-40 lg:ml-40  font-bold">Profile</h2>
             
-            <section className="">
+            <section className="hidden">
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
