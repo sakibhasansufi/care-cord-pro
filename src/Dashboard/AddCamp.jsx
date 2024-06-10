@@ -11,28 +11,28 @@ const AddCamp = () => {
     const axiosSecure = useAxiosSecure();
     const onSubmit = async (data) => {
         console.log(data);
-        const imageFile = {image : data.image[0]}
-        const res = await axiosPublic.post(image_hosting_api,imageFile,{
-            headers : {
+        const imageFile = { image: data.image[0] }
+        const res = await axiosPublic.post(image_hosting_api, imageFile, {
+            headers: {
                 'content-type': 'multipart/form-data'
             }
         });
-        if(res.data.success){
+        if (res.data.success) {
             const campDataItem = {
-                name : data.name,
-                image : res.data.data.display_url,
-                fees : data.fees,
-                date : data.date,
-                time : data.time,
-                location : data.location,
-                professionalName : data.professionalName,
-                description : data.description
+                name: data.name,
+                image: res.data.data.display_url,
+                fees: data.fees,
+                date: data.date,
+                time: data.time,
+                location: data.location,
+                professionalName: data.professionalName,
+                description: data.description
 
             }
 
             const campAdd = await axiosSecure.post('/campAdd', campDataItem);
             console.log(campAdd.data)
-            if(campAdd.data.insertedId){
+            if (campAdd.data.insertedId) {
                 reset();
                 Swal.fire({
                     position: "top-end",
@@ -40,14 +40,16 @@ const AddCamp = () => {
                     title: `${data.name} camp has been added`,
                     showConfirmButton: false,
                     timer: 1500
-                  });
+                });
             }
         }
-        console.log('with image url',res.data);
+        console.log('with image url', res.data);
     }
+
+    
     return (
         <div>
-            <h2 className="text-4xl mx-auto  font-bold">Add Item</h2>
+            <h2 className="text-4xl mb-2  font-bold">Add Item</h2>
             <section>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label >Camp Name <span className="text-red">*</span></label> <br />
@@ -67,8 +69,8 @@ const AddCamp = () => {
                         </div>
 
                         <div>
-                            <label >Date</label> <br />
-                            <input type="date" name="date"  className="w-auto md:w-[200px] px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring mt-2 mb-2" {...register("date")} />
+                            <label >Date </label> <br />
+                            <input type="date" name="date" className="w-auto md:w-[200px] px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring mt-2 mb-2" {...register("date")}  />
                         </div>
 
                     </div>

@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
       {
         path: '/camp/:id',
         element: <PrivateRoute><SingleCard></SingleCard></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://care-cord-pro-server.vercel.app/camp/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/camp/${params.id}`)
       }
 
     ]

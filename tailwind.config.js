@@ -13,7 +13,8 @@ export default {
     colors : {
       red :'#D22B2B',
       white : '#FFFFFF',
-      black : '#023020'
+      black : '#023020',
+      green : '#0BDA51'
     },
     fontFamily : {
       montserrat : ['Montserrat', 'sans-serif'],

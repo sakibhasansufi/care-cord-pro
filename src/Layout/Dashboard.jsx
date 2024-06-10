@@ -6,7 +6,6 @@ import { LuSettings2 } from "react-icons/lu";
 import { MdHomeFilled } from "react-icons/md";
 import { IoAnalyticsSharp } from "react-icons/io5";
 import { MdPayment } from "react-icons/md";
-import useJoin from "../hooks/useJoin";
 import useAdmin from "../hooks/useAdmin";
 
 
@@ -20,7 +19,7 @@ const Dashboard = () => {
                 <ul className="menu">
 
                     {
-                        isAdmin ? <>
+                        isAdmin ? <section className="w-40">
                             <p className="text-2xl font-semibold mb-4">Care Cord Pro <br /> <span className="text-lg font-medium">Admin Dash Board</span> </p>
                             <div className="flex ">
                                 <IoIosContact className="text-3xl" />
@@ -36,14 +35,14 @@ const Dashboard = () => {
                             </div>
                             <div className="flex mt-4">
                                 <LuSettings2 className="text-3xl" />
-                                <li><NavLink to='/dashboard/manageRegister' className='drop-shadow-xl'>Manage Register Camp</NavLink></li>
+                                <li><NavLink to='/dashboard/manageRegister' className='drop-shadow-xl '>Manage Register <br />Camp</NavLink></li>
                             </div>
                             <div className="divider"></div>
                             <div className="flex ">
                                 <MdHomeFilled className="text-3xl" />
                                 <li><NavLink to='/' className='drop-shadow-xl'>Home</NavLink></li>
                             </div>
-                        </>
+                        </section>
                             :
 
                             <>

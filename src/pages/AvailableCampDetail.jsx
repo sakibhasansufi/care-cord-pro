@@ -50,13 +50,20 @@ const AvailableCampDetail = ({ avl }) => {
 
 
                     </div>
-                    
-                        
 
-                    </div>
+
+                    <Link to={`/campAdd`}>
+                        <button className="btn btn-primary">Details</button>
+                    </Link>
+
+
+
+
+
                 </div>
+            </div>
 
-            
+
         </section>
     );
 };

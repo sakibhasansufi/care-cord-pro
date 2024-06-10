@@ -5,7 +5,7 @@ import AvailableCampDetail from './AvailableCampDetail'
 const AvailableCamp = () => {
     const [available, setAvailable] = useState([]);
     useEffect(() => {
-        fetch('https://care-cord-pro-server.vercel.app/campAdd')
+        fetch('http://localhost:5000/campAdd')
             .then(res => res.json())
             .then(data => setAvailable(data))
     }, [])

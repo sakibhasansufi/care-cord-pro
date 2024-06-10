@@ -7,7 +7,7 @@ const Card = () => {
     
     const [medCamp, setMedCamp] = useState([]);
     useEffect(() => {
-        fetch('https://care-cord-pro-server.vercel.app/camp')
+        fetch('http://localhost:5000/camp')
             .then(res => res.json())
             .then(data => setMedCamp(data))
     }, [])

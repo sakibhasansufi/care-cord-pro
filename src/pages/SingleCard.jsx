@@ -40,7 +40,7 @@ const SingleCard = () => {
         }
         // console.log(name,fees,location,profession,userName,email,age,phone,gender,emergency);
         console.log(camp);
-        fetch('https://care-cord-pro-server.vercel.app/joincamp',{
+        fetch('http://localhost:5000/joincamp',{
             method : 'POST',
             headers : {
                 'content-type' : 'application/json'
