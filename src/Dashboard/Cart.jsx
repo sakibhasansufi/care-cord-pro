@@ -26,7 +26,7 @@ const Cart = () => {
     return (
         <div className="mr-8 ">
             
-            <section className="hidden">
+            <section className="">
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
