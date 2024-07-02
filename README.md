@@ -19,5 +19,5 @@ Users can  see the dashboard. This website has admin panel. Admin can add, updat
 
 If you clone this repository and  want to run this website , you will need your own firebase configuration and mongoDB database username and password. Because firebase configuration and mongoDb user and password is ignored in this github repository.
 
-# Live Lonk
+# Live Link
 https://carecordpro.web.app/
